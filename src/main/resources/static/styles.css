@@ -1,0 +1,273 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-header,
+.app-footer {
+    padding: 1rem 2rem;
+    background: #020617;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.auth-status {
+    font-size: 0.9rem;
+    color: #a5b4fc;
+}
+
+.app-main {
+    flex: 1;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: #020617;
+    border-radius: 0.75rem;
+    padding: 1.2rem 1.4rem;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.75);
+    border: 1px solid #1f2937;
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    color: #e5e7eb;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.inline-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 0.5rem 1rem;
+}
+
+.grid-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 0;
+}
+
+label {
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+input,
+select {
+    padding: 0.45rem 0.6rem;
+    border-radius: 0.45rem;
+    border: 1px solid #374151;
+    background: #020617;
+    color: #e5e7eb;
+    font-size: 0.9rem;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 1px #6366f1;
+}
+
+.btn {
+    border: none;
+    border-radius: 0.45rem;
+    padding: 0.45rem 0.8rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background: #111827;
+    color: #e5e7eb;
+    transition: background 0.15s, transform 0.05s;
+}
+
+.btn.primary {
+    background: #4f46e5;
+}
+
+.btn.secondary {
+    background: #1d4ed8;
+}
+
+.btn.danger {
+    background: #b91c1c;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.1);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.btn.full-width {
+    width: 100%;
+}
+
+.tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 0.4rem 0.5rem;
+    border-radius: 999px;
+    border: 1px solid #4b5563;
+    background: #020617;
+    color: #9ca3af;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    background: #4f46e5;
+    color: white;
+    border-color: #4f46e5;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.message {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    min-height: 1em;
+}
+
+.message.error {
+    color: #fca5a5;
+}
+
+.message.success {
+    color: #6ee7b7;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.75rem;
+    max-height: 200px;
+    overflow: auto;
+    font-size: 0.85rem;
+}
+
+.list li {
+    padding: 0.4rem 0.5rem;
+    border-bottom: 1px solid #1f2937;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+}
+
+.table th,
+.table td {
+    padding: 0.45rem 0.5rem;
+    border-bottom: 1px solid #1f2937;
+    text-align: left;
+}
+
+.table th {
+    font-weight: 500;
+    color: #9ca3af;
+}
+
+.filter-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    align-items: flex-end;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.app-footer {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    gap: 0.5rem;
+}
+
+.app-footer a {
+    color: #a5b4fc;
+    text-decoration: none;
+}
+
+.app-footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .app-main {
+        padding: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .app-header,
+    .app-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+    }
+}
+
